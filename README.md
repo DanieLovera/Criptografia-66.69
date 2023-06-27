@@ -1,6 +1,6 @@
 # Virus en Python #
 
-**Integrantes**
+### Integrantes ###
 | Nombre | Padrón |
 | ------ | ------ |
 | Carol Lugones Ignacio | 100073 |
@@ -8,7 +8,7 @@
 | Torresetti Lisandro | 99846 |
 | Zaietz Azul | 102214 |
 
-[Informe de Trabajo Práctico](TPCripto.pdf)
+[Virus en Python - Informe de Trabajo Práctico](assets/TPCripto.pdf)
 
 ## Ejecución de scripts ##
 
