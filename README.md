@@ -1,6 +1,14 @@
-# Virus - Demo #
+# Virus en Python #
 
-[Virus en Python - Informe de Trabajo Práctico](path_to_file)
+**Integrantes**
+| Nombre | Padrón |
+| ------ | ------ |
+| Carol Lugones Ignacio | 100073 |
+| Lovera Lopez Daniel Alejandro | 103442 |
+| Torresetti Lisandro | 99846 |
+| Zaietz Azul | 102214 |
+
+[Informe de Trabajo Práctico](TPCripto.pdf)
 
 ## Ejecución de scripts ##
 
@@ -47,11 +55,11 @@ def get_tags(file_path):
 ```
 
 Para infectar un archivo se procesa el codigo para que no se pueda reconocer a vista la nueva porcion de codigo dentro de un archivo. El procesamiento consiste en tres etapas:
-1. Transformar el codigo: ```***transform_virus_code(...)***```   
+1. **Transformar el codigo**: ```transform_virus_code(...)```   
 Agrega aleatoriedad al script, asi cuando se codifique siempre dara resultados diferentes sin alterar las el codigo.
-2. Codifica el codigo base: ```***obscure_virus_code(...)***```   
+2. **Codifica el codigo base**: ```obscure_virus_code(...)```   
 Codifica en base64 el codigo y lo comprime para que sea inentendible.
-3. Incorporar script de ejecucion:   
+3. **Incorporar script de ejecucion**:   
 Concatena el codigo del virus codificado junto a las instrucciones de decodificado y decompresion para que pueda ser interpretado por python.
 ```
 def infect(file_path, virus):
