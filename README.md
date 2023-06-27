@@ -96,11 +96,3 @@ def execute_payload():
     for file_path in file_paths:
         clear_file(file_path)
 ```
-
-## Resultados ##
-
-
-
-
-
-
