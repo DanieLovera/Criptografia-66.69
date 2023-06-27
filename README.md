@@ -4,6 +4,15 @@
 
 ## Ejecucion ##
 
+**Calculadora**
+Aplicacion simple que lanza una calculadora en pantalla, incluye el virus transformado dentro del codigo fuente, por lo tanto su ejecucion infectara todos los archivos que se encuentren en el mismo directorio en donde se encuentre el archivo virus
+
+- python3 calculadora.py (TODO: CONFIRMAR QUE ES ASI -> NO PUEDO EJECUTARLO YO)
+
+**Virus**
+Codigo fuente del virus, si se ejecuta infectara todos los archivos que se encuentren en el mismo directorio en donde se encuentre el archivo virus.py
+
+- python3 virus.py
 
 ## Introducción ##
 La siguiente implementacion consiste en una demostracion de un virus informatico simple como parte del trabajo practico
