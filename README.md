@@ -18,13 +18,13 @@ Aplicacion simple que lanza una calculadora en pantalla, incluye el virus transf
 - python3 calculadora.py (TODO: CONFIRMAR QUE ES ASI -> NO PUEDO EJECUTARLO YO)
 
 **Virus**   
-Codigo fuente del virus, si se ejecuta infectara todos los archivos que se encuentren en el mismo directorio en donde se encuentre el archivo virus.py
+Código fuente del virus, si se ejecuta infectara todos los archivos que se encuentren en el mismo directorio en donde se encuentre el archivo virus.py
 
 - python3 virus.py
 
 ## Introducción ##
-La siguiente implementación consiste en una demostración de un virus informatico simple como parte del trabajo practico
-para la catedra, Criptografia 66.69 de Facultad de Ingenieria de la UBA. El virus es capaz de copiarse a si mismo sobre otros scripts
+La siguiente implementación consiste en una demostración de un virus informatico simple como parte del trabajo práctico
+para la cátedra, Criptografía 66.69 de Facultad de Ingenieria de la UBA. El virus es capaz de copiarse a si mismo sobre otros scripts
 de python (.py) que esten contenidos en el directorio actual en donde se ejecuta. Para intentar ocultar el código fuente insertado
 en estos archivos se codifica en base64, comprime su contenido y para lograr aleatoriedad en el resultado se insertan comentarios 
 aleatorios en el código.
@@ -43,7 +43,7 @@ def replicate():
         infect(file_path, virus)
 ```
 
-Para leer el codigo del virus en un archivo que se encuentra infectado se buscan los tags de inicio y final dentro del mismo, los cuales se definen con el nombre del archivo y un hash para dificultar el entendimiento de las etiquetas.
+Para leer el código del virus en un archivo que se encuentra infectado se buscan los tags de inicio y final dentro del mismo, los cuales se definen con el nombre del archivo y un hash para dificultar el entendimiento de las etiquetas.
 ```
 def get_tags(file_path):
     file_name = os.path.basename(file_path)
@@ -55,12 +55,12 @@ def get_tags(file_path):
 ```
 
 Para infectar un archivo se procesa el codigo para que no se pueda reconocer a vista la nueva porcion de codigo dentro de un archivo. El procesamiento consiste en tres etapas:
-1. **Transformar el codigo**: ```transform_virus_code(...)```   
-Agrega aleatoriedad al script, asi cuando se codifique siempre dara resultados diferentes sin alterar las el codigo.
-2. **Codifica el codigo base**: ```obscure_virus_code(...)```   
+1. **Transformar el código**: ```transform_virus_code(...)```   
+Agrega aleatoriedad al script, asi cuando se codifique siempre dara resultados diferentes sin alterar las el código.
+2. **Codifica el código base**: ```obscure_virus_code(...)```   
 Codifica en base64 el codigo y lo comprime para que sea inentendible.
-3. **Incorporar script de ejecucion**:   
-Concatena el codigo del virus codificado junto a las instrucciones de decodificado y decompresion para que pueda ser interpretado por python.
+3. **Incorporar script de ejecución**:   
+Concatena el código del virus codificado junto a las instrucciones de decodificado y decompresion para que pueda ser interpretado por python.
 ```
 def infect(file_path, virus):
     file_infected = False
@@ -83,8 +83,8 @@ def infect(file_path, virus):
             clean_file.writelines(data)
 ```
 
-**Ejecucion**:   
-Define la accion que el virus ejecuta una vez que se haya replicado. En este caso es algo tan sencillo como eliminar informacion (archivos con extension txt y md) del ordenador del usuario.
+**Ejecución**:   
+Define la acción que el virus ejecuta una vez que se haya replicado. En este caso es algo tan sencillo como eliminar informacion (archivos con extension txt y md) del ordenador del usuario.
 ```
 def execute_payload():
     txt_pattern = "*.txt"
