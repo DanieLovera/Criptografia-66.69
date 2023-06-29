@@ -8,7 +8,7 @@
 | Torresetti Lisandro | 99846 |
 | Zaietz Azul | 102214 |
 
-[Virus en Python - Informe de Trabajo Práctico](assets/TPCripto.pdf)
+[Virus en Python - Informe de Trabajo Práctico](assets/informe.pdf)
 
 ## Dependencias
 
